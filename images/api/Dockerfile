@@ -1,0 +1,10 @@
+FROM node:latest
+
+WORKDIR /usr/app
+
+COPY package*.json .
+RUN npm install --quit
+
+COPY ./ ./
+
+CMD [ "npm", "start" ]
