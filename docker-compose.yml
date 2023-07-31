@@ -4,8 +4,15 @@ services:
   api:
     build: ./images/api
     ports:
-      - 3000:3000
+      - 1000:3000
     volumes:
-      - ./images/api/src:/usr/app/src
+      - ./images/api/src:/usr/api/src
+
+  front-end:
+    build: ./images/front-end
+    ports:
+      - 1001:3000
+    volumes:
+      - ./images/api/src:/user/app/src
 
   
