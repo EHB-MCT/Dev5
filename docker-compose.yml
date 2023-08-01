@@ -8,6 +8,17 @@ services:
     volumes:
       - ./images/api/src:/usr/api/src
 
+  store:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    enviroment:
+      POSTGRES_USER:
+      POSTGRES_PASSWORD:
+      POSTGRES_DB:
+      POSTGRES_HOST_AUTH_MEDTHOD:
+
+
   front-end:
     build: ./images/front-end
     ports:
