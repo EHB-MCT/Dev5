@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 //root route
 app.get('/', (req, res) => {
     //response.status(300).redirect("/info.html")
-    response.send('Hello world')
+    res.send('Hello world');
 });
 
 //GET: All users

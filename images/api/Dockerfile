@@ -7,4 +7,4 @@ RUN npm install --quit
 
 COPY ./ ./
 
-CMD [ "npm", "start" ]
+CMD [ "npm", "start", "migrate"]

@@ -7,22 +7,40 @@ services:
       - 1000:3000
     volumes:
       - ./images/api/src:/usr/api/src
+    environment:
+      DATABASE_URL: "postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}"
+    depends_on:
+      - db
+    env_file:
+      - .env
 
-  store:
+  db:
     image: postgres:latest
+    restart: always
     ports:
       - 5432:5432
     environment:
-      POSTGRES_USER: ${PGUSER}
-      POSTGRES_PASSWORD: ${PGPASSWORD}
-      POSTGRES_DB: ${PGDATABASE}
-
-
-  front-end:
-    build: ./images/front-end
-    ports:
-      - 1001:3000
+      POSTGRES_USER:
+      POSTGRES_PASSWORD:
+      POSTGRES_DB:
+      POSTGRES_HOST_AUTH_METHOD:
     volumes:
-      - ./images/api/src:/user/app/src
+      - ./pgdata:/var/lib/postgresql/data
+
+  # pg-admin:
+  #   image: dpage/pgadmin4
+  #   environment:
+  #     - PGADMIN_DEFAULT_EMAIL=admin@email.com
+  #     - PGADMIN_DEFAULT_PASSWORD=admin
+  #     - PGADMIN_LISTEN_PORT=5050
+  #   ports:
+  #     - 5050:5050
+
+  # front-end:
+  #   build: ./images/front-end
+  #   ports:
+  #     - 1001:3000
+  #   volumes:
+  #     - ./images/api/src:/user/app/src
 
   
