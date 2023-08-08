@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valorant - Login</title>
-    <script src="login.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="createAccount.js"></script>
+    <title>Create account</title>
 </head>
 <body>
     <div id="loginPage">
         <div class="form" autocomplete="off" id="column1">
             <h1>ValoWiki</h1>
-            <form id="loginForm">
+            <form id="createUserForm">
                 <div id="firstnameDiv">
                     <input id="username" type="text" placeholder="username">
                 </div>
@@ -20,10 +21,10 @@
                 </div>
                 <div id="message"></div>
                 <div>
-                    <button id="loginButton" class="button" type="submit">Log In</button>
+                    <button id="createUserButton" class="button" type="submit">Create Account</button>
                 </div>
                 <div id="createAccountLink">
-                    <p>Don't have an account yet?<a href="createAccount.html"> Create one</a></p>
+                    <p>Already have an account?<a href="index.html"> Log In</a></p>
                 </div>
             </form>
         </div>
