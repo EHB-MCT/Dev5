@@ -1,11 +1,11 @@
-
 async function getValorantAgents(){
     const response = await fetch("https://valorant-api.com/v1/agents");
     const data = await response.json();
     const agents = data.data.filter(agent => agent.isPlayableCharacter);
 
     agents.forEach(agent => {
-        document.getElementById("agent").insertAdjacentHTML("afterend", 
+      const myAgent = document.getElementById("agent");
+      myAgent.insertAdjacentHTML("afterend", 
         `<h2>${agent.displayName}</h2>
         <p>Role: ${agent.role.displayName}</p>
         <img src="${agent.fullPortrait}" alt="" style="max-height: 100px">

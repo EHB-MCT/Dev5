@@ -7,7 +7,6 @@ app.use(bodyParser.json());
 
 //root route
 app.get('/', (req, res) => {
-    //response.status(300).redirect("/info.html")
     res.send('Hello world');
 });
 

@@ -27,20 +27,11 @@ services:
     volumes:
       - ./pgdata:/var/lib/postgresql/data
 
-  # pg-admin:
-  #   image: dpage/pgadmin4
-  #   environment:
-  #     - PGADMIN_DEFAULT_EMAIL=admin@email.com
-  #     - PGADMIN_DEFAULT_PASSWORD=admin
-  #     - PGADMIN_LISTEN_PORT=5050
-  #   ports:
-  #     - 5050:5050
-
-  # front-end:
-  #   build: ./images/front-end
-  #   ports:
-  #     - 1001:3000
-  #   volumes:
-  #     - ./images/api/src:/user/app/src
+  web:
+    build: ./images/web
+    ports:
+      - 80:80
+    volumes:
+       - ./images/web/src/:/usr/share/nginx/html/
 
   
