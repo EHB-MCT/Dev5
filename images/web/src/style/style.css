@@ -128,11 +128,11 @@ a:hover{
 /* -------------------- agents --------------------*/
 
 #main{
-    max-width: 80%;
+    max-width: 70%;
     margin: auto;
     color: #bdbdbd;
-    text-align: center;
     background-color: #0e1921;
+    background-image: src("./images/valorantBg2.jpeg");
 }
 
 #main h2{
@@ -146,21 +146,52 @@ a:hover{
 }
 
 #agentContainer{
+    background:rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+.agent{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    text-align: left;
+    flex-flow: row;
+    padding: 50px;
+    box-shadow: 0px 3px 3px #000;
+    backdrop-filter: blur(10px);
 }
 
-#agent{
-    max-width: 30%;
-    padding: 20px;
-    background:rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
+#agentInfo{
+    max-width: 50%;
 }
 
-#agent img{
-    max-height: 300px;
-    float: right;
+#agentImage{
+    max-width: 100%;
     overflow: hidden;
 }
+
+#agentBg{
+    display: block;
+    position: absolute;
+    float: left;
+}
+
+/* -------------------- agentIcons --------------------*/
+
+#agentIcons{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    align-items: center;
+    align-content: space-evenly;
+}
+
+.icon {
+    height: 80px;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 3px #000;
+}
+.icon img{
+    max-height: 80px;
+    overflow: hidden;
+}
+
