@@ -37,4 +37,5 @@ async function saveUser(){
     .then(result => console.log(result))
     .catch(error => console.log('error', error))
     .then(document.location.href = "valoAgents.html");
+
 }
