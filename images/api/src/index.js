@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const knex = require('./db/db');
+const knex = require('./db');
 const app = express();
 
 app.use(bodyParser.json());

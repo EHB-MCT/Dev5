@@ -7,4 +7,6 @@ RUN npm install --quit
 
 COPY ./ ./
 
-CMD [ "npm", "start", "migrate"]
+WORKDIR /usr/api/src
+
+CMD npx knex migrate:latest ;npm start

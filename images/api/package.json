@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon src/index.js",
     "test": "jest --watchAll",
-    "migrate": "knex migrate:latest",
+    "migrate": "npx knex migrate:latest",
     "rollback": "knex migrate:rollback"
   },
   "repository": {
