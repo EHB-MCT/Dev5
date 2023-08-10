@@ -1,0 +1,166 @@
+*{
+    font-family: forma-djr-deck, sans-serif;
+    margin: 0;
+}
+
+
+body{
+    background-color: #0e1921;
+}
+
+p{
+    font-weight: medium;
+}
+
+h1{
+    font-weight: medium;
+    text-transform: uppercase;
+    color: #FF4454;
+    font-size: 40px;
+}
+
+/* -------------------- loginpage --------------------*/
+
+#loginPage{
+    display: flex;
+}
+
+.image{
+    overflow: hidden;
+    max-height: 1080px;
+}
+
+#column1, #form{
+    margin-top: 10%;
+    margin-left: 10%;
+    flex: 40%;
+}
+
+/* -------------------- form --------------------*/
+
+
+.form{
+    padding: 0;
+    border-radius: 20px;
+}
+
+form {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+input[type=text], input[type=password]{
+    background-color: #0e1921;
+    color: #585858;
+    box-sizing: border-box;
+    border: 1px solid #585858;
+    border-radius: 10px;
+    padding: 8px 15px;
+    margin-top: 20px;
+    width: 80%;
+
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    outline: none;
+    color: #fff;
+}
+
+.button{
+    cursor: pointer;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 8px 20px;
+    margin-top: 20px;
+    width: 40%;
+
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.button:hover{
+    transition: ease 100ms;
+    color: white;
+    background-color: #FF4454;
+    border: 1px solid #FF4454;
+    padding: 8px 20px;
+}
+
+#loginButton{
+    width: 40%;
+}
+
+#createAccountLink{
+    margin-top: 20px;
+}
+
+#loginPage p, #pageDiv p{
+    margin-top: 20px;
+    font-weight: 500;
+    color: #585858;
+}
+
+#form p{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover{
+    color: #FF4454;
+    transition: ease 100ms;
+}
+
+/* -------------------- agents --------------------*/
+
+#main{
+    max-width: 80%;
+    margin: auto;
+    color: #bdbdbd;
+    text-align: center;
+    background-color: #0e1921;
+}
+
+#main h2{
+    color: #fff;
+}
+#main h3{
+    color: #fff;
+}
+#main h4{
+    color: #fff;
+}
+
+#agentContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+}
+
+#agent{
+    max-width: 30%;
+    padding: 20px;
+    background:rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+#agent img{
+    max-height: 300px;
+    float: right;
+    overflow: hidden;
+}
