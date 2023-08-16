@@ -19,10 +19,13 @@ async function getValorantAgents() {
           <h3>${agent.displayName}</h3>
           <br>
           <h4>Role:</h4>
-          <p> <img src="${agent.role.displayIcon}" alt=""> ${agent.role.displayName}</p>
+          <p> <img id="roleIcon" src="${agent.role.displayIcon}" alt=""> ${agent.role.displayName}</p>
           <br>
           <h4>Description:</h4>
           <p>${agent.description}</p>
+          <br>
+          <h4>Abilities:</h4>
+          <p>${agent.abilities}</p>
         </div>
       </div>`);
 
