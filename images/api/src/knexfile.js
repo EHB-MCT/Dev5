@@ -8,9 +8,6 @@ module.exports = {
       password: process.env.POSTGRES_PASSWORD,
       database: process.env.POSTGRES_DB,
       host: 'db',
-      /* database: 'my_dev5_postgres_db',
-      user: 'robbosmans',
-      password: 'postgres' */
     },
     pool: {
       min: 2,
