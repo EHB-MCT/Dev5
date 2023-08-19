@@ -152,7 +152,22 @@ a:hover{
     line-height: 1.5;
 }
 
-#agentContainer{
+#menu{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding-top: 10px;
+}
+
+#menu a{
+    padding-left: 40px;
+}
+
+#menu a:hover{
+    text-decoration: underline;
+}
+
+#agentContainer, #weaponContainer{
     margin-top: 20px;
 }
 
@@ -184,9 +199,45 @@ a:hover{
     max-width: 10px;
 }
 
+.weapon{
+    display: flex;
+    flex-direction: column;
+    background:rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 3px #000;
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    margin-right: 20px;
+}
+
+#skins{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#weaponContainer h3 {
+    font-size: 50px;
+}
+
+#skin{
+    flex-grow: 1;
+    margin: 10px;
+    background:rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 3px #000;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+}
+#skin h4{
+    padding: 10px;
+}
+
+#skin img{
+    text-align: center;
+}
+
 /* -------------------- agentIcons --------------------*/
 
-#agentIcons{
+#agentIcons, #weaponIcons{
     display: flex;
     flex-wrap: wrap;
     text-align: left;
@@ -200,6 +251,7 @@ a:hover{
     background-color: rgba(0, 0, 0, 0.3);
     box-shadow: 0px 3px 3px #000;
 }
+
 .icon img{
     max-height: 80px;
     overflow: hidden;

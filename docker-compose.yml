@@ -7,8 +7,6 @@ services:
       - 1000:3000
     volumes:
       - ./images/api/src:/usr/api/src
-    # environment:
-    #   DATABASE_URL: "postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}"
     depends_on:
       db:
         condition: service_healthy
@@ -41,5 +39,12 @@ services:
       - 80:80
     volumes:
        - ./images/web/src/:/usr/share/nginx/html/
+
+  # app:
+  #   build: ./images/app
+  #   ports:
+  #     - 81:80
+  #   volumes:
+  #     - ./images/app/dist:/usr/app/html
 
   
