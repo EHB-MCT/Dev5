@@ -40,11 +40,12 @@ services:
     volumes:
        - ./images/web/src/:/usr/share/nginx/html/
 
-  # app:
-  #   build: ./images/app
-  #   ports:
-  #     - 81:80
-  #   volumes:
-  #     - ./images/app/dist:/usr/app/html
+  app:
+    build: ./images/app
+    ports:
+      - 8080:8080
+    volumes:
+      - ./images/app:/usr/app
+    stdin_open: true
 
   

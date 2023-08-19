@@ -27,13 +27,12 @@ h1{
 
 .image{
     overflow: hidden;
-    max-height: 1080px;
 }
 
 #column1, #form{
     margin-top: 10%;
     margin-left: 10%;
-    flex: 40%;
+    width: 50%;
 }
 
 /* -------------------- form --------------------*/

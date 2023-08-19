@@ -1,6 +1,8 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
+let selectedAgent;
+
 function threejs(){
     //add scene and camera
     const scene = new THREE.Scene();
@@ -20,7 +22,7 @@ function threejs(){
     let agentModel;
 
     //load gltf files
-    loader.load( 'assets/agents/Breach.glb', function ( gltf ) {
+    loader.load( `../assets/agents/${selectedAgent}.glb`, function ( gltf ) {
         agentModel = gltf;
         scene.add( gltf.scene );
         gltf.scene.position.set(0, -0.2, -0.5);
@@ -39,6 +41,28 @@ function threejs(){
         renderer.render( scene, camera );
     }
 }
+async function getValorantAgents() {
+    const response = await fetch("https://valorant-api.com/v1/agents");
+    const data = await response.json();
+    const agents = data.data.filter(agent => agent.isPlayableCharacter);
+  
+    const agentIconsContainer = document.getElementById("agentIcons");
+    const agentContainer = document.getElementById("agentContainer");
+  
+    agents.forEach(agent => {
+      agentIconsContainer.insertAdjacentHTML("afterbegin", 
+        `<div class="icon" id="${agent.displayName}-icon">
+          <img src="${agent.displayIcon}" alt="">
+        </div>`);
+  
+      const icon = document.getElementById(`${agent.displayName}-icon`);
+  
+      icon.addEventListener("click", () => {
+        selectedAgent = agent.displayName;
+        threejs();
+      });
+    });
+}
+getValorantAgents();
 
-threejs();
 

@@ -22,8 +22,44 @@ h1{
     font-size: 40px;
 }
 
-canvas{
+/* canvas{
     position: absolute;
     left: 0;
     top: 0;
+} */
+
+#menu{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding-top: 10px;
+}
+
+#menu a{
+    padding-left: 40px;
+}
+
+#menu a:hover{
+    text-decoration: underline;
+}
+/* -------------------- agentIcons --------------------*/
+
+#agentIcons, #weaponIcons{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    align-items: center;
+    align-content: space-evenly;
+}
+
+.icon {
+    height: 80px;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 3px #000;
+}
+
+.icon img{
+    max-height: 80px;
+    overflow: hidden;
 }
