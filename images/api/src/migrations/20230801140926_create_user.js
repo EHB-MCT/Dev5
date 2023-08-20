@@ -1,4 +1,5 @@
 
+//Create a table in the database
 exports.up = function(knex) {
     return knex.schema.createTable("users", (table) => {
         table.increments('id');
@@ -8,6 +9,7 @@ exports.up = function(knex) {
   })
 };
 
+//Drops a table from the database 
 exports.down = function(knex) {
   return knex.schema.dropTable("users");
 };
