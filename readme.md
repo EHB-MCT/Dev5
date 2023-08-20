@@ -2,6 +2,8 @@ EHB Dev-V Course project by Rob Bosmans
 
 Valorant WIKI with a user database and three.js models all in a docker container
 
+Website runs on localhost:80
+
 .env file template:
     POSTGRES_USER=
     POSTGRES_PASSWORD=
