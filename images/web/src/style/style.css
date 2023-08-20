@@ -162,7 +162,7 @@ a:hover{
     padding-left: 40px;
 }
 
-#menu a:hover{
+a.active, #menu a:hover{
     text-decoration: underline;
 }
 

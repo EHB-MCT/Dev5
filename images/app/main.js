@@ -13,9 +13,10 @@ function threejs(){
     const renderer = new THREE.WebGLRenderer({ alpha: true});
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.appendChild( renderer.domElement );
+    renderer.domElement.id = "canvas";
 
     //add lighting
-    const light = new THREE.AmbientLight( 0x404040, 100 ); // soft white light
+    const light = new THREE.AmbientLight( 0x404040, 100 );
     scene.add( light );
 
     const loader = new GLTFLoader();
@@ -41,13 +42,23 @@ function threejs(){
         renderer.render( scene, camera );
     }
 }
+
+function clearCanvas(){
+  const canvasElement = document.getElementById("canvas");
+  if(canvasElement){
+    canvasElement.remove();
+    threejs();
+  } else {
+    threejs();
+  }
+}
+
 async function getValorantAgents() {
     const response = await fetch("https://valorant-api.com/v1/agents");
     const data = await response.json();
     const agents = data.data.filter(agent => agent.isPlayableCharacter);
   
     const agentIconsContainer = document.getElementById("agentIcons");
-    const agentContainer = document.getElementById("agentContainer");
   
     agents.forEach(agent => {
       agentIconsContainer.insertAdjacentHTML("afterbegin", 
@@ -59,7 +70,7 @@ async function getValorantAgents() {
   
       icon.addEventListener("click", () => {
         selectedAgent = agent.displayName;
-        threejs();
+        clearCanvas();
       });
     });
 }
